@@ -1,0 +1,40 @@
+/* Colori per il testo del JSON */
+.language-json .token.property {
+    color: #00ffff !important;
+    font-weight: 600;
+    text-shadow: 0 0 8px rgba(0, 255, 255, 0.5);
+}
+
+.language-json .token.string {
+    color: #00ff88 !important;
+    text-shadow: 0 0 6px rgba(0, 255, 136, 0.4);
+}
+
+.language-json .token.number {
+    color: #ff6b6b !important;
+    font-weight: 600;
+    text-shadow: 0 0 6px rgba(255, 107, 107, 0.4);
+}
+
+.language-json .token.boolean {
+    color: #ffa500 !important;
+    font-weight: 600;
+    text-shadow: 0 0 6px rgba(255, 165, 0, 0.4);
+}
+
+.language-json .token.null {
+    color: #ff4757 !important;
+    font-weight: 600;
+    text-shadow: 0 0 6px rgba(255, 71, 87, 0.4);
+}
+
+.language-json .token.punctuation {
+    color: #a0a0ff !important;
+    font-weight: 500;
+}
+
+/* Animazione per il testo del JSON */
+@keyframes glow {
+    0%, 100% { text-shadow: 0 0 5px rgba(224, 240, 255, 0.3); }
+    50% { text-shadow: 0 0 10px rgba(224, 240, 255, 0.6), 0 0 15px rgba(0, 255, 255, 0.3); }
+}

@@ -1,0 +1,174 @@
+/* Pannello di controllo */
+.control-panel {
+    width: 320px;
+    background: rgba(20, 25, 50, 0.85);
+    border-left: 1px solid rgba(100, 180, 255, 0.3);
+    padding: 20px;
+    overflow-y: auto;
+    backdrop-filter: blur(5px);
+    z-index: 10;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.control-group {
+    margin-bottom: 25px;
+    background: rgba(30, 40, 80, 0.4);
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid rgba(100, 180, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.control-group.mouse-wheel-active {
+    background: rgba(79, 172, 254, 0.2);
+    border: 2px solid #4facfe;
+    box-shadow: 0 0 15px rgba(79, 172, 254, 0.4);
+    animation: pulse-highlight 2s infinite;
+}
+
+.control-group.mouse-wheel-active h3 i {
+    display: none;
+}
+
+.control-group.mouse-wheel-active h3::before {
+    content: "🖱️";
+    color: #00ff00;
+    margin-right: 5px;
+}
+
+.control-group.mouse-wheel-active h3::after {
+    content: "";
+}
+
+.control-group.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    background: rgba(30, 40, 80, 0.2);
+}
+
+.control-group.disabled h3 {
+    color: #666;
+}
+
+.control-group.disabled .slider {
+    background: linear-gradient(90deg, #333, #555);
+    cursor: not-allowed;
+}
+
+.control-group.disabled .slider::-webkit-slider-thumb {
+    background: #666;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.control-group h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #00f2fe;
+    display: flex;
+    align-items: center;
+}
+
+.control-group h3 i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.slider-container {
+    margin-bottom: 15px;
+}
+
+.slider-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.slider {
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    background: linear-gradient(90deg, #1e3c72, #2a5298);
+    border-radius: 4px;
+    outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #4facfe;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(79, 172, 254, 0.8);
+    transition: all 0.2s;
+}
+
+.slider::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+    background: #5fb8ff;
+}
+
+/* Pulsanti */
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+button {
+    flex: 1;
+    padding: 10px;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    border: 1px solid rgba(100, 180, 255, 0.3);
+    color: #e0f0ff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #2a5298, #3a6bc0);
+    box-shadow: 0 0 10px rgba(79, 172, 254, 0.5);
+    transform: translateY(-2px);
+}
+
+/* SCROLLBAR */
+
+/* Stile personalizzato per la scrollbar del pannello di controllo */
+.control-panel::-webkit-scrollbar {
+    width: 12px;
+}
+
+.control-panel::-webkit-scrollbar-track {
+    background: rgba(30, 40, 80, 0.4);
+    border-radius: 6px;
+    border: 1px solid rgba(100, 180, 255, 0.2);
+    margin: 8px 0; /* Aggiunge margine per evitare il taglio */
+}
+
+.control-panel::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #4facfe, #2a5298);
+    border-radius: 6px;
+    border: 1px solid rgba(100, 180, 255, 0.3);
+    box-shadow: 0 0 8px rgba(79, 172, 254, 0.4);
+    transition: all 0.3s ease;
+    margin: 2px; /* Aggiunge margine per evitare il taglio del thumb */
+}
+
+.control-panel::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #5fb8ff, #3a62a8);
+    box-shadow: 0 0 12px rgba(79, 172, 254, 0.6);
+    transform: scale(1.05);
+}
+
+.control-panel::-webkit-scrollbar-thumb:active {
+    background: linear-gradient(180deg, #00f2fe, #1e3c72);
+    box-shadow: 0 0 15px rgba(0, 242, 254, 0.8);
+}
+
+.control-panel::-webkit-scrollbar-corner {
+    background: rgba(20, 25, 50, 0.85);
+}

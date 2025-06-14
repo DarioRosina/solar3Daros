@@ -1,0 +1,317 @@
+/* Scrollbar personalizzata per la modale di esportazione */
+#exportModal .modal-body pre::-webkit-scrollbar {
+    width: 12px;
+}
+
+#exportModal .modal-body pre::-webkit-scrollbar-track {
+    background: rgba(30, 40, 80, 0.4);
+    border-radius: 6px;
+    border: 1px solid rgba(100, 180, 255, 0.2);
+    margin: 8px 0; /* Aggiunge margine per evitare il taglio */
+}
+
+#exportModal .modal-body pre::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #4facfe, #2a5298);
+    border-radius: 6px;
+    border: 1px solid rgba(100, 180, 255, 0.3);
+    box-shadow: 0 0 8px rgba(79, 172, 254, 0.4);
+    transition: all 0.3s ease;
+    margin: 2px; /* Aggiunge margine per evitare il taglio del thumb */
+}
+
+#exportModal .modal-body pre::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #5fb8ff, #3a62a8);
+    box-shadow: 0 0 12px rgba(79, 172, 254, 0.6);
+    transform: scale(1.05);
+}
+
+#exportModal .modal-body pre::-webkit-scrollbar-thumb:active {
+    background: linear-gradient(180deg, #00f2fe, #1e3c72);
+    box-shadow: 0 0 15px rgba(0, 242, 254, 0.8);
+}
+
+#exportModal .modal-body pre::-webkit-scrollbar-corner {
+    background: rgba(20, 25, 50, 0.85);
+}
+
+/* Stili per la modale di importazione simili a quella di esportazione */
+#importModal .modal-body pre {
+    background: linear-gradient(135deg, #1a1a2e, #16213e) !important;
+    border: 1px solid rgba(255, 0, 128, 0.3);
+    border-radius: 8px;
+    font-size: 13px;
+    line-height: 1.6;
+    margin: 0;
+    box-shadow: 0 0 20px rgba(255, 0, 128, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+#importModal .modal-body code.language-json {
+    background: transparent !important;
+    color: #e0f0ff !important;
+    font-family: 'JetBrains Mono', 'Fira Code', 'Source Code Pro', 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+    font-weight: 500;
+    white-space: pre;
+    display: block;
+    padding: 20px;
+    text-shadow: 0 0 5px rgba(224, 240, 255, 0.3);
+    letter-spacing: 0.5px;
+    min-height: 150px;
+}
+
+/* Scrollbar personalizzata per la modale di importazione (stesso stile della modale export) */
+#importModal .modal-body pre::-webkit-scrollbar {
+    width: 12px;
+}
+
+#importModal .modal-body pre::-webkit-scrollbar-track {
+    background: rgba(30, 40, 80, 0.4);
+    border-radius: 6px;
+    border: 1px solid rgba(100, 180, 255, 0.2);
+    margin: 8px 0;
+}
+
+#importModal .modal-body pre::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #4facfe, #2a5298);
+    border-radius: 6px;
+    border: 1px solid rgba(100, 180, 255, 0.3);
+    box-shadow: 0 0 8px rgba(79, 172, 254, 0.4);
+    transition: all 0.3s ease;
+    margin: 2px;
+}
+
+#importModal .modal-body pre::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #5fb8ff, #3a62a8);
+    box-shadow: 0 0 12px rgba(79, 172, 254, 0.6);
+    transform: scale(1.05);
+}
+
+#importModal .modal-body pre::-webkit-scrollbar-thumb:active {
+    background: linear-gradient(180deg, #00f2fe, #1e3c72);
+    box-shadow: 0 0 15px rgba(0, 242, 254, 0.8);
+}
+
+#importModal .modal-body pre::-webkit-scrollbar-corner {
+    background: rgba(20, 25, 50, 0.85);
+}
+
+/* Effetto hover per il contenitore del codice di importazione */
+#importModal .modal-body pre:hover {
+    box-shadow: 0 0 30px rgba(255, 0, 128, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Placeholder per l'area contenteditable */
+#importJson:empty:before {
+    content: "Incolla qui la configurazione JSON...";
+    color: rgba(224, 240, 255, 0.5);
+    font-style: italic;
+}
+
+/* Modal Styles */
+.modal {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    margin: 5% auto;
+    padding: 0;
+    border: 1px solid rgba(100, 180, 255, 0.3);
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    color: #e0f0ff;
+}
+
+.modal-header {
+    padding: 20px;
+    border-bottom: 1px solid rgba(100, 180, 255, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h3 {
+    margin: 0;
+    color: #4facfe;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+/* Personalizzazione Prism.js per il modal */
+.modal-body pre {
+    background: linear-gradient(135deg, #1a1a2e, #16213e) !important;
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    border-radius: 8px;
+    font-size: 13px;
+    line-height: 1.6;
+    margin: 0;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Effetto rainbow per il titolo del modal di esportazione */
+h3[data-translate="exportConfig"] {
+    background: linear-gradient(90deg, #00ffff, #0080ff, #8000ff, #ff0080, #ff8000, #ffff00, #00ffff);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: rainbow-text 3s linear infinite;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 18px;
+    text-shadow: none;
+}
+
+@keyframes rainbow-text {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
+}
+
+/* Fallback per browser che non supportano background-clip: text */
+@supports not (-webkit-background-clip: text) {
+    h3[data-translate="exportConfig"] {
+        background: none;
+        color: #00ffff;
+        text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+        animation: glow-title 2s ease-in-out infinite alternate;
+    }
+    
+    @keyframes glow-title {
+        from { text-shadow: 0 0 10px rgba(0, 255, 255, 0.8); }
+        to { text-shadow: 0 0 20px rgba(0, 255, 255, 1), 0 0 30px rgba(0, 128, 255, 0.8); }
+    }
+}
+
+/* Effetto rainbow per il titolo del modal di importazione */
+h3[data-translate="importConfig"] {
+    background: linear-gradient(90deg, #ff0080, #8000ff, #0080ff, #00ffff, #00ff80, #80ff00, #ff8000);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: rainbow-text-import 3s linear infinite;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 18px;
+    text-shadow: none;
+}
+
+@keyframes rainbow-text-import {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
+}
+
+/* Fallback per browser che non supportano background-clip: text */
+@supports not (-webkit-background-clip: text) {
+    h3[data-translate="importConfig"] {
+        background: none;
+        color: #ff0080;
+        text-shadow: 0 0 10px rgba(255, 0, 128, 0.8);
+        animation: glow-title-import 2s ease-in-out infinite alternate;
+    }
+    
+    @keyframes glow-title-import {
+        from { text-shadow: 0 0 10px rgba(255, 0, 128, 0.8); }
+        to { text-shadow: 0 0 20px rgba(255, 0, 128, 1), 0 0 30px rgba(128, 0, 255, 0.8); }
+    }
+}
+
+.modal-body code.language-json {
+    background: transparent !important;
+    color: #e0f0ff !important;
+    font-family: 'JetBrains Mono', 'Fira Code', 'Source Code Pro', 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+    font-weight: 500;
+    white-space: pre;
+    display: block;
+    padding: 20px;
+    text-shadow: 0 0 5px rgba(224, 240, 255, 0.3);
+    letter-spacing: 0.5px;
+}
+
+/* Effetto hover per il contenitore del codice di esportazione */
+#exportModal .modal-body pre:hover {
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Stile per il pulsante copia con tema futuristico */
+.copy-overlay {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 8px 12px;
+    background: linear-gradient(135deg, rgba(0, 255, 255, 0.2), rgba(0, 128, 255, 0.2));
+    color: #00ffff;
+    border: 1px solid rgba(0, 255, 255, 0.5);
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 500;
+    z-index: 10;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+.copy-overlay:hover {
+    background: linear-gradient(135deg, rgba(0, 255, 255, 0.3), rgba(0, 128, 255, 0.3));
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Stili per le notifiche toast */
+.copy-toast {
+    animation: pulse-glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes pulse-glow {
+    from {
+        box-shadow: 0 4px 20px rgba(0, 255, 136, 0.4);
+    }
+    to {
+        box-shadow: 0 4px 25px rgba(0, 255, 136, 0.6), 0 0 30px rgba(0, 255, 136, 0.3);
+    }
+}
+
+/* Miglioramento del pulsante durante la copia */
+.copy-button-success {
+    background: linear-gradient(135deg, #00ff88, #00cc6a) !important;
+    color: #000 !important;
+    font-weight: 600 !important;
+    text-shadow: none !important;
+}
+
+.modal-body code.language-json:hover {
+    animation: glow 2s ease-in-out infinite;
+}
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #4facfe;
+}

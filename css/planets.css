@@ -1,0 +1,56 @@
+/* Cursore pointer quando un pianeta è selezionato */
+body.planet-selected .control-group:not(#planetListGroup) {
+    cursor: pointer;
+    pointer-events: auto; /* Riabilita gli eventi del mouse */
+}
+
+body.planet-selected .control-group:not(#planetListGroup):hover {
+    background: rgba(79, 172, 254, 0.1);
+    border-color: rgba(79, 172, 254, 0.4);
+}
+
+/* Mantieni l'aspetto disabilitato ma permetti l'interazione */
+body.planet-selected .control-group.disabled:not(#planetListGroup) {
+    opacity: 0.7; /* Leggermente meno opaco per indicare che è cliccabile */
+}
+
+@keyframes pulse-highlight {
+    0%, 100% { box-shadow: 0 0 15px rgba(79, 172, 254, 0.4); }
+    50% { box-shadow: 0 0 25px rgba(79, 172, 254, 0.6); }
+}
+
+.planet-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.planet-item {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-radius: 5px;
+    background: rgba(30, 40, 80, 0.5);
+    cursor: pointer;
+    transition: all 0.3s;
+    border: 1px solid transparent;
+}
+
+.planet-item:hover {
+    background: rgba(50, 70, 130, 0.7);
+    border-color: rgba(100, 180, 255, 0.5);
+}
+
+.planet-item.selected {
+    background: rgba(70, 100, 180, 0.7);
+    border-color: #4facfe;
+    box-shadow: 0 0 10px rgba(79, 172, 254, 0.5);
+}
+
+.planet-color {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
