@@ -4,6 +4,12 @@
 # 🌌 Interactive 3D Solar System
 > An immersive experience to explore the solar system in 3D with realistic animations and interactive controls.
 
+## 🎬 Demo
+
+**Online Demo:** Try the live version here: [https://solar3-daros.vercel.app/](https://solar3-daros.vercel.app/)
+
+![Preview Interface solar3Daros](screenshot/previewInterface_002.gif)
+
 ## 🚀 Key Features
 
 ### 🌍 Realistic 3D Visualisation
@@ -67,19 +73,19 @@
 solar3daros/
 ├── index.html              # Main Page  
 ├── css/                    # Stylesheets  
-│   ├── main.css            # Main Styles  
-│   ├── controls.css        # UI Controls Styles  
-│   ├── planets.css         # Planet List Styles  
-│   ├── modal.css           # Modal Styles  
-│   └── json.css            # Syntax Highlighting Styles  
+│   ├── main.css                # Main Styles  
+│   ├── controls.css            # UI Controls Styles  
+│   ├── planets.css             # Planet List Styles  
+│   ├── modal.css               # Modal Styles  
+│   └── json.css                # Syntax Highlighting Styles  
 ├── js/                     # JavaScript Modules  
-│   ├── config.js           # Configurations and Translations  
-│   ├── planets-data.js     # Planet Scientific Data  
-│   ├── solar-system.js     # 3D Rendering Logic  
-│   ├── ui-controls.js      # User Interface Management  
-│   ├── camera.js           # Camera Controls  
-│   ├── import-export.js    # I/O Features  
-│   └── modal.js            # Modal Management
+│   ├── config.js               # Configurations and Translations  
+│   ├── planets-data.js         # Planet Scientific Data  
+│   ├── solar-system.js         # 3D Rendering Logic  
+│   ├── ui-controls.js          # User Interface Management  
+│   ├── camera.js               # Camera Controls  
+│   ├── import-export.js        # I/O Features  
+│   └── modal.js                # Modal Management
 ```
 
 
@@ -133,12 +139,6 @@ solar3daros/
 - ✅ **Safari** 14+
 - ✅ **Edge** 90+
 - 📱 **Mobile** responsive
-
-## 🎬 Demo
-
-**Online Demo:** Try the live version here: [https://solar3-daros.vercel.app/](https://solar3-daros.vercel.app/)
-
-![Preview Interface solar3Daros](screenshot/previewInterface_001.jpg)
 
 ## 🤝 Contributions
 

@@ -4,6 +4,12 @@
 # 🌌 Sistema Solare 3D Interattivo
 > Un'esperienza immersiva per esplorare il sistema solare in 3D con animazioni realistiche e controlli interattivi.
 
+## 🎬 Demo
+
+**Demo Online:** Prova la versione live qui: [https://solar3-daros.vercel.app/](https://solar3-daros.vercel.app/)
+
+![Anteprima Interfaccia solar3Daros](screenshot/previewInterface_002.gif)
+
 ## 🚀 Caratteristiche Principali
 
 ### 🌍 Visualizzazione 3D Realistica
@@ -66,20 +72,20 @@
 ```
 solar3daros/
 ├── index.html              # Pagina principale
-├── css/                     # Fogli di stile
-│   ├── main.css            # Stili principali
-│   ├── controls.css        # Stili controlli UI
-│   ├── planets.css         # Stili lista pianeti
-│   ├── modal.css           # Stili modali
-│   └── json.css            # Stili syntax highlighting
-├── js/                      # Moduli JavaScript
-│   ├── config.js           # Configurazioni e traduzioni
-│   ├── planets-data.js     # Dati scientifici pianeti
-│   ├── solar-system.js     # Logica rendering 3D
-│   ├── ui-controls.js      # Gestione interfaccia utente
-│   ├── camera.js           # Controlli camera
-│   ├── import-export.js    # Funzionalità I/O
-│   └── modal.js            # Gestione modali
+├── css/                    # Fogli di stile
+│   ├── main.css                # Stili principali
+│   ├── controls.css            # Stili controlli UI
+│   ├── planets.css             # Stili lista pianeti
+│   ├── modal.css               # Stili modali
+│   └── json.css                # Stili syntax highlighting
+├── js/                     # Moduli JavaScript
+│   ├── config.js               # Configurazioni e traduzioni
+│   ├── planets-data.js         # Dati scientifici pianeti
+│   ├── solar-system.js         # Logica rendering 3D
+│   ├── ui-controls.js          # Gestione interfaccia utente
+│   ├── camera.js               # Controlli camera
+│   ├── import-export.js        # Funzionalità I/O
+│   └── modal.js                # Gestione modali
 ```
 
 
@@ -133,12 +139,6 @@ solar3daros/
 - ✅ **Safari** 14+
 - ✅ **Edge** 90+
 - 📱 **Mobile** responsive
-
-## 🎬 Demo
-
-**Demo Online:** Prova la versione live qui: [https://solar3-daros.vercel.app/](https://solar3-daros.vercel.app/)
-
-![Anteprima Interfaccia solar3Daros](screenshot/previewInterface_001.jpg)
 
 ## 🤝 Contributi
 
