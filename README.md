@@ -6,7 +6,7 @@
 
 ## 🎬 Demo
 
-**Online Demo:** Try the live version here: [https://solar3-daros.vercel.app/](https://solar3-daros.vercel.app/)
+**Online Demo:** Try the live version here: [https://solar3d.darioros.it](https://solar3d.darioros.it/)
 
 ![Preview Interface solar3Daros](screenshot/previewInterface_002.gif)
 
