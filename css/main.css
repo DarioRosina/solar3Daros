@@ -27,12 +27,19 @@ body {
     gap: 10px;
 }
 
-/* GitHub Link */
-.github-link {
+/* Header Links */
+.header-links {
     position: absolute;
     top: 20px;
     left: 20px;
     z-index: 100;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* GitHub Link */
+.github-link {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -63,6 +70,40 @@ body {
 
 .github-link:hover svg {
     transform: scale(1.1);
+}
+
+.version-link {
+    min-width: 58px;
+    padding: 5px 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(20, 25, 50, 0.8);
+    border: 1px solid rgba(100, 180, 255, 0.3);
+    border-radius: 8px;
+    color: #e0f0ff;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.15;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.version-link small {
+    margin-top: 2px;
+    font-size: 9px;
+    letter-spacing: 0.5px;
+}
+
+.version-link:hover {
+    background: rgba(79, 172, 254, 0.2);
+    border-color: #4facfe;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(79, 172, 254, 0.4);
+    color: #4facfe;
 }
 
 .language-flag {
@@ -216,12 +257,12 @@ h2 {
         white-space: nowrap;
     }
 
-    .github-link,
+    .header-links,
     .language-selector {
         top: 14px;
     }
 
-    .github-link {
+    .header-links {
         left: 12px;
     }
 

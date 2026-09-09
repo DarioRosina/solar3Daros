@@ -1,33 +1,35 @@
-[0.0.2] - 2026-09-09
+# Changelog
 
-- Ottimizzare la visualizzazione per dispositivi mobile seguendo questi punti:
+## [0.0.3] - 2026-09-09
 
-1. La bandiera italiana e inglese possono occupare la stessa posizione in alto a destra. Se è attiva la versione in italiano, viene mostrata la bandiera inglese (e viceversa).
+- Aggiunto riquadro linkato a destra che punta a https://www.darioros.it/posts/solar3Daros
 
-MODIFICA 1
-- Ripristina la situazione precedente con le bandiere delle lingue che sono visibili entrambe.
+## [0.0.2] - 2026-09-09
 
-2. Il titolo "3D Solar System" ("Sistema Solare 3D") con un font più piccolo, tale da occupare solo una riga. Da posizionare in basso senza sovrapporre il link GitHub e la bandiera mostrata.
+### Aggiunto
 
-MODIFICA 2
-- Titolo italiano: "Sistema Solare 3D Interattivo"
-- Titolo inglese: "Interactive 3D Solar System"
+- Nuovo favicon a tema sistema solare, disponibile in più risoluzioni e collegato esplicitamente alla pagina.
+- Toggle mobile bilingue per mostrare e nascondere il pannello di controllo come menu a tendina.
+- Supporto alla chiusura del pannello mobile con il tasto `Esc` e attributi ARIA per l'accessibilità.
 
+### Modificato
 
-3. Il sottotitolo non deve essere mostrato. Al suo posto un toggle che mostra/nasconde il pannello di controllo (tipo menù a tendina)
+- Ottimizzato il layout dell'intestazione per schermi fino a 900 px.
+- Mantenute entrambe le bandiere delle lingue visibili e affiancate in alto a destra, con evidenziazione della lingua attiva.
+- Impostato il titolo italiano su "Sistema Solare 3D Interattivo".
+- Impostato il titolo inglese su "Interactive 3D Solar System".
+- Ridotta la dimensione del titolo sui dispositivi mobili per mantenerlo su una sola riga e separarlo dal link GitHub e dalle bandiere.
+- Rimosso il sottotitolo dall'intestazione.
+- Trasformato il pannello di controllo mobile in un menu sovrapposto alla scena, con altezza adattata allo schermo.
+- Nascosto il titolo "Pannello di Controllo" nella versione mobile; rimane visibile nella versione desktop.
+- Adattata l'altezza dell'applicazione alla viewport dinamica dei dispositivi mobili.
 
-- Su desktop quando si fa mouseover sopra la bandiera della lingua, invece di mostrare la bandiera, mostra un riquadro blu
+### Corretto
 
-- Crea un favicon rappresentativa da usare in questa applicazione di sistema solare 3D interattivo.
+- Corretto l'hover delle bandiere su desktop, che in precedenza mostrava un riquadro blu al posto dell'immagine.
 
-4. Il titolo "Pannello di controllo" va mostrato solamente per la versione desktop, ma non per gli schermi mobile quando viene mostrato come menù a tendina
+## Modifiche precedenti
 
---------------------------------------------------------------------------------
-
--PRIMA-
-
-- Aggiornamento link sito web
-
-- Aggiunta della Demo animata
-
-- Aggiunto link alla versione Online
+- Aggiornato il link del sito web.
+- Aggiunta la demo animata.
+- Aggiunto il link alla versione online.
