@@ -1,5 +1,5 @@
 // Variabili globali
-let currentLanguage = 'en';
+let currentLanguage = document.documentElement.lang || 'it';
 
 let mouse = new THREE.Vector2();
 let raycaster = new THREE.Raycaster();
@@ -14,6 +14,8 @@ const translations = {
     it: {
         title: "Sistema Solare 3D Interattivo",
         subtitle: "Esplora il sistema solare in 3D con animazioni realistiche",
+        showControls: "Mostra controlli",
+        hideControls: "Nascondi controlli",
         controlPanel: "Pannello di Controllo",
         planets: "Pianeti",
         planetSize: "Dimensione Pianeta",
@@ -48,6 +50,8 @@ const translations = {
     en: {
         title: "Interactive 3D Solar System",
         subtitle: "Explore the solar system in 3D with realistic animations",
+        showControls: "Show controls",
+        hideControls: "Hide controls",
         controlPanel: "Control Panel",
         planets: "Planets",
         planetSize: "Planet Size",
@@ -123,7 +127,12 @@ function translatePage(lang) {
     document.querySelectorAll('.language-flag').forEach(flag => {
         flag.classList.remove('active');
     });
-    document.querySelector(`[data-lang="${lang}"]`).classList.add('active');
+    const activeFlag = document.querySelector(`[data-lang="${lang}"]`);
+    activeFlag.classList.add('active');
+
+    if (typeof updateControlPanelToggleLabel === 'function') {
+        updateControlPanelToggleLabel();
+    }
     
     // Update planet data translations
     updatePlanetTranslations();

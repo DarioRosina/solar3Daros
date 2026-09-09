@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema Solare 3D Interattivo</title>
+    <link rel="icon" href="favicon.ico" sizes="any">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.140.0/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.140.0/examples/js/controls/OrbitControls.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Fira+Code:wght@400;500;600&family=Source+Code+Pro:wght@400;500;600&display=swap" rel="stylesheet">
@@ -19,8 +20,8 @@
 <body>
     <!-- Language Selector -->
     <div class="language-selector">
-        <div class="language-flag flag-it active" data-lang="it" title="Italiano"></div>
-        <div class="language-flag flag-en" data-lang="en" title="English"></div>
+        <button type="button" class="language-flag flag-it active" data-lang="it" title="Italiano" aria-label="Passa all'italiano"></button>
+        <button type="button" class="language-flag flag-en" data-lang="en" title="English" aria-label="Switch to English"></button>
     </div>
 
     <!-- Effetto stelle -->
@@ -36,13 +37,17 @@
         </a>
         
         <h1 data-translate="title">Sistema Solare 3D Interattivo</h1>
-        <p data-translate="subtitle">Esplora il sistema solare in 3D con animazioni realistiche</p>
+        <button type="button" id="controlPanelToggle" class="control-panel-toggle" aria-controls="controlPanel" aria-expanded="false">
+            <span class="control-panel-toggle-icon" aria-hidden="true">☰</span>
+            <span data-translate="showControls">Mostra controlli</span>
+            <span class="control-panel-toggle-chevron" aria-hidden="true">⌄</span>
+        </button>
     </header>
     
     <div class="container">
         <div id="solarSystem"></div>
 
-        <div class="control-panel">
+        <div class="control-panel" id="controlPanel">
             <h2 data-translate="controlPanel">Pannello di Controllo</h2>
                         
             <div class="control-group" id="revolutionControlGroup">

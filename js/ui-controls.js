@@ -392,6 +392,35 @@ document.querySelectorAll('.language-flag').forEach(flag => {
     });
 });
 
+const controlPanelToggle = document.getElementById('controlPanelToggle');
+const controlPanel = document.getElementById('controlPanel');
+
+function updateControlPanelToggleLabel() {
+    if (!controlPanelToggle || !controlPanel) return;
+
+    const isOpen = controlPanel.classList.contains('is-open');
+    const label = controlPanelToggle.querySelector('[data-translate]');
+    label.dataset.translate = isOpen ? 'hideControls' : 'showControls';
+    label.textContent = translations[currentLanguage][label.dataset.translate];
+}
+
+if (controlPanelToggle && controlPanel) {
+    controlPanelToggle.addEventListener('click', () => {
+        const isOpen = controlPanel.classList.toggle('is-open');
+        controlPanelToggle.setAttribute('aria-expanded', String(isOpen));
+        updateControlPanelToggleLabel();
+    });
+
+    document.addEventListener('keydown', event => {
+        if (event.key === 'Escape' && controlPanel.classList.contains('is-open')) {
+            controlPanel.classList.remove('is-open');
+            controlPanelToggle.setAttribute('aria-expanded', 'false');
+            updateControlPanelToggleLabel();
+            controlPanelToggle.focus();
+        }
+    });
+}
+
 
 // Aggiungi event listener per evidenziare il JSON mentre viene digitato
 const importJson = document.getElementById('importJson');
