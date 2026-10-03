@@ -12,6 +12,7 @@ let lastImportedConfig = null;
 // Translation system
 const translations = {
     it: {
+        discoverOrbita: "Scopri la nuova versione: Orbita",
         title: "Sistema Solare 3D Interattivo",
         subtitle: "Esplora il sistema solare in 3D con animazioni realistiche",
         showControls: "Mostra controlli",
@@ -48,6 +49,7 @@ const translations = {
         importError: "Configurazione JSON non valida. Controlla il formato."
     },
     en: {
+        discoverOrbita: "Discover the new version: Orbita",
         title: "Interactive 3D Solar System",
         subtitle: "Explore the solar system in 3D with realistic animations",
         showControls: "Show controls",
@@ -114,6 +116,10 @@ const planetTranslations = {
 function translatePage(lang) {
     currentLanguage = lang;
     document.documentElement.lang = lang;
+
+    const orbitaLink = document.getElementById('orbitaLink');
+    orbitaLink.title = translations[lang].discoverOrbita;
+    orbitaLink.setAttribute('aria-label', translations[lang].discoverOrbita);
     
     // Update all elements with data-translate attribute
     document.querySelectorAll('[data-translate]').forEach(element => {

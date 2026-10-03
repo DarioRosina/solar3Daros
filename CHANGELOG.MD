@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.0.4] - 2026-10-03
+
+- Aggiunto link alla nuova versione: Orbita.
+
 ## [0.0.3] - 2026-09-09
 
 - Aggiunto riquadro linkato a destra che punta a https://www.darioros.it/posts/solar3Daros

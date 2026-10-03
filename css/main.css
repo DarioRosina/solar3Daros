@@ -24,7 +24,62 @@ body {
     right: 20px;
     z-index: 100;
     display: flex;
+    align-items: center;
     gap: 10px;
+}
+
+/* Orbita: simbolo orbitale originale della nuova applicazione. */
+.orbita-link {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 40px;
+    flex: none;
+    background: rgba(20, 25, 50, 0.8);
+    border: 1px solid rgba(239, 189, 120, 0.4);
+    border-radius: 8px;
+    color: #efbd78;
+    transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.orbita-link:hover,
+.orbita-link:focus-visible {
+    background: rgba(239, 189, 120, 0.15);
+    box-shadow: 0 0 12px rgba(239, 189, 120, 0.4);
+}
+
+.orbita-link:focus-visible {
+    outline: 2px solid #efbd78;
+    outline-offset: 3px;
+}
+
+.orbita-logo {
+    position: relative;
+    display: block;
+    width: 23px;
+    height: 23px;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    transform: rotate(-35deg);
+}
+
+.orbita-logo::before {
+    content: "";
+    position: absolute;
+    inset: 6px -7px;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+}
+
+.orbita-logo::after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    left: 2px;
+    top: 1px;
+    border-radius: 50%;
+    background: currentColor;
 }
 
 /* Header Links */
@@ -244,6 +299,12 @@ h2 {
 
 
 /* Responsive */
+@media (max-width: 380px) {
+    .github-link span {
+        display: none;
+    }
+}
+
 @media (max-width: 900px) {
     header {
         padding: 62px 12px 10px;
